@@ -1,0 +1,9 @@
+.App {
+  /* text-align: center; */
+  background-color: #fafafa;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url('./Component/fonts/Lobster-Regular.ttf');
+}
