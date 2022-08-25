@@ -5,9 +5,9 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import axios from 'axios'
 import UpdateDetailPage from './UpdateDetailPage';
-import { getCookieToken } from '../../../shared/cookie';
+import { getCookieToken } from '../../shared/cookie';
 import { useDispatch, useSelector } from "react-redux";
-import { getPost } from '../../../Redux/modules/postSlice';
+import { getPost } from '../../Redux/modules/postSlice';
 
 const MyModal = ({ othersMenuOpen, setOthersMenuOpen, data }) => {
   const [clickUpdate, setClickUpdate] = useState(false);

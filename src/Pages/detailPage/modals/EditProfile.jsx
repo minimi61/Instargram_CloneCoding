@@ -3,8 +3,8 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import styled from 'styled-components';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../../shared/firebase';
-import { __patchEditProfile } from '../../../Redux/modules/editProfile';
+import { storage } from '../../shared/firebase';
+import { __patchEditProfile } from '../../Redux/modules/editProfile';
 import { useDispatch } from 'react-redux';
 import addImage from '../../../Image/addImg.png'
 import 기본로고 from '../../../Image/사용자 기본로고.jpg'

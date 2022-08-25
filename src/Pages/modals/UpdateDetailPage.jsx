@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import Modal from '@mui/material/Modal';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { initializeApp } from 'firebase/app';
-import { storage } from '../../../shared/firebase';
-import { __editPost } from '../../../Redux/modules/postSlice';
+import { storage } from '../../shared/firebase';
+import { __editPost } from '../../Redux/modules/postSlice';
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserData } from '../../../shared/cookie';
+import { getUserData } from '../../shared/cookie';
 
 const UpdateDetailPage = ({data,clickUpdate, setClickUpdate, setOthersMenuOpen}) => {
   const userInfo = getUserData()

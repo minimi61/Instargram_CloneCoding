@@ -5,15 +5,15 @@ import ClearIcon from '@mui/icons-material/Clear';
 import DetailPageComment from './DetailPageComment';
 import Modal from '@mui/material/Modal';
 import { useDispatch, useSelector } from 'react-redux'
-import { __postComment } from '../../../../Redux/modules/comment';
-import { __getComment } from '../../../../Redux/modules/comment';
-import { __postPost } from '../../../../Redux/modules/postSlice';
-import { __getDetail } from '../../../../Redux/modules/detailSlice';
-import 사용자기본로고 from '../../../../Image/사용자 기본로고.jpg'
-import heart from '../../../../Image/heart.png'
-import send from '../../../../Image/send.png'
-import commentIcon from '../../../../Image/commentIcon.png'
-import colorHeart from '../../../../Image/colorHeart.png'
+import { __postComment } from '../../Redux/modules/comment';
+import { __getComment } from '../../Redux/modules/comment';
+import { __postPost } from '../../Redux/modules/postSlice';
+import { __getDetail } from '../../Redux/modules/detailSlice';
+import 사용자기본로고 from '../../Image/사용자 기본로고.jpg'
+import heart from '../../Image/heart.png'
+import send from '../../Image/send.png'
+import commentIcon from '../../Image/commentIcon.png'
+import colorHeart from '../../Image/colorHeart.png'
 
 const DetailPage = ({openDetail,setOpenDetail,data,likeButton,tagContent,othersMenuOpen,setOthersMenuOpen}) => {
 

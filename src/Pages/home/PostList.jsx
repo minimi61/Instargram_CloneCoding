@@ -5,16 +5,16 @@ import Card from '@mui/material/Card';
 import styled_components from 'styled-components';
 import Comment from './Comment';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import DetailPage from './userPage/detailPage/DetailPage';
-import MyModal from './modals/MyModal';
+import DetailPage from '../detailPage/DetailPage';
+import MyModal from '../modals/MyModal';
 import axios from 'axios'
 import { getCookieToken } from '../../shared/cookie';
 import { useDispatch } from "react-redux";
 import { getPost } from '../../Redux/modules/postSlice';
-import LikeButtonDetail from './modals/LikeButtonDetail'
+import LikeButtonDetail from '../modals/LikeButtonDetail'
 import { useNavigate } from 'react-router-dom';
 import { getUserData } from '../../shared/cookie';
-import OthersModal from './modals/OthersModal'
+import OthersModal from '../modals/OthersModal'
 import noImg from '../../Image/noImg.jpg'
 import heart from '../../Image/heart.png'
 import send from '../../Image/send.png'

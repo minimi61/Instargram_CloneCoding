@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import 기본로고 from '../../../Image/사용자 기본로고.jpg'
-import { getCookieToken } from '../../../shared/cookie'
+import 기본로고 from '../../Image/사용자 기본로고.jpg'
+import { getCookieToken } from '../../shared/cookie'
 import axios from 'axios'
 
 

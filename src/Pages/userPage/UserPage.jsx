@@ -1,7 +1,7 @@
-import logo from '../../../Image/사용자 기본로고.jpg'
-import logo2 from '../../../Image/인스타 게시글 로고.png'
-import logo3 from '../../../Image/인스타 팔로워 로고.png'
-import logo4 from '../../../Image/인스타 팔로우 로고.png'
+import logo from '../../Image/사용자 기본로고.jpg'
+import logo2 from '../../Image/인스타 게시글 로고.png'
+import logo3 from '../../Image/인스타 팔로워 로고.png'
+import logo4 from '../../Image/인스타 팔로우 로고.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faComment, faGear, faHeart, faL } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
@@ -9,8 +9,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { useEffect, useState, } from 'react'
 import { useDispatch, useSelector, } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { __getUserPage, __getUserInfo } from '../../../Redux/modules/userPage'
-import { getUserData } from '../../../shared/cookie'
+import { __getUserPage, __getUserInfo } from '../../Redux/modules/userPage'
+import { getUserData } from '../../shared/cookie'
 import EditProfile from '../modals/EditProfile'
 import Follower from './Follower'
 import Follow from './Follow'

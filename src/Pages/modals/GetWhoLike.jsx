@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { getCookieToken } from '../../../shared/cookie'
+import { getCookieToken } from '../../shared/cookie'
 import axios from 'axios'
-import { getUserData } from '../../../shared/cookie'
-import 기본로고 from '../../../Image/사용자 기본로고.jpg'
+import { getUserData } from '../../shared/cookie'
+import 기본로고 from '../../Image/사용자 기본로고.jpg'
 
 const GetWhoLike = ({ likeData,data,followedResult }) => {
   const [getFollowData, setGetFollowData] = React.useState(followedResult)

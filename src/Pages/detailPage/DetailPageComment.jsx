@@ -5,11 +5,11 @@ import { width } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { __getComment, __deleteComment } from '../../../../Redux/modules/comment'
-import { __geteCommentLike , __postCommentLike } from "../../../../Redux/modules/commentLike"
-import 사용자기본로고 from '../../../../Image/사용자 기본로고.jpg'
-import heart from '../../../../Image/heart.png'
-import colorHeart from '../../../../Image/colorHeart.png'
+import { __getComment, __deleteComment } from '../../Redux/modules/comment'
+import { __geteCommentLike , __postCommentLike } from "../../Redux/modules/commentLike"
+import 사용자기본로고 from '../../Image/사용자 기본로고.jpg'
+import heart from '../../Image/heart.png'
+import colorHeart from '../../Image/colorHeart.png'
 
 
 const DetailPageComment = ({reload, setReload, data}) => {

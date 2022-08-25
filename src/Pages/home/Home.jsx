@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Main from './Main'
-import AddButton from './modals/AddButton';
+import AddButton from '../modals/AddButton'
 
 const Home = ({ openImg, setOpenImg, setDropmenu }) => {
   const ClickOuter = () => {

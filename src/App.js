@@ -4,8 +4,9 @@ import { Route, Routes, useNavigate,Link, Switch } from 'react-router-dom';
 import Login from './Pages/Login/Login'
 import Register from './Pages/Login/Register'
 import Home from './Pages/home/Home';
-import UserPage from './Pages/home/userPage/UserPage';
-import DetailPage from './Pages/home/userPage/detailPage/DetailPage';
+import UserPage from './Pages/userPage/UserPage'
+// import UserPage from './Pages/home/userPage/UserPage';
+import DetailPage from './Pages/detailPage/DetailPage';
 import Header from './Pages/Header';
 import { getCookieToken } from './shared/cookie';
 

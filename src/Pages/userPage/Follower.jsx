@@ -4,48 +4,51 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import ClearIcon from '@mui/icons-material/Clear';
 import axios from 'axios'
-import { getUserData } from '../../../shared/cookie';
-import { getCookieToken } from '../../../shared/cookie';
-import GetWhoFollow from './GetWhoFollow';
+import { getUserData } from '../../shared/cookie';
+import { getCookieToken } from '../../shared/cookie';
+import GetWhoFollower from './GetWhoFollower';
 
-const Follow =({ userInfoName, openFollow, setOpenFollow }) => {
+const Follower = ({ userInfoName,openFollower, setOpenFollower }) => {
   const tokenId = getUserData();
-  // console.log(tokenId)
-  const [getFollowData, setGetFollowData] = useState(null)
+
+  const [getFollowerData, setGetFollowerData] = useState(null)
   
   const getFollow = async () => {
-    const response =  await axios.get(`https://jdh3340.shop/api/user/${userInfoName}/follow`,{
+    const response =  await axios.get(`https://jdh3340.shop/api/user/${userInfoName}/follower`,{
       headers: {
         "Authorization": getCookieToken()
       }
     })
-    setGetFollowData(response.data.data)
+    setGetFollowerData(response.data.data)
+    // console.log(response.data.data)
   }
   useEffect(() => {
     getFollow()
   }, [])
 
   const handleClose = () => {
-    setOpenFollow(false)
+    setOpenFollower(false)
   }
   return (
     <Modal
-    open={openFollow}
+    open={openFollower}
     onClose={handleClose}
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description">
     <Box sx={mystyle}>
       <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', fontSize: '20px', borderBottom: '1px solid lightgray' }}>
         <div></div>
-        <div style={{ fontWeight: '800' }}>팔로우</div>
-        <ClearIcon sx={{ cursor: 'pointer' }} onClick={() => {setOpenFollow(false)}} />
+        <div style={{ fontWeight: '800' }}>팔로워</div>
+        <ClearIcon sx={{ cursor: 'pointer' }} onClick={() => {setOpenFollower(false)}} />
       </div>
-      {getFollowData && getFollowData.map((followData, i) => {return <GetWhoFollow followData={followData} followed={followData.followed} key={i} />
+        {getFollowerData && getFollowerData.map((followerData, i) => {
+          return <GetWhoFollower followerData={followerData} followed={followerData.followed} key={i} />
       })}
   </Box>
   </Modal>  
   )
 }
+
 const mystyle = {
   position: 'absolute',
   top: '50%',
@@ -58,4 +61,6 @@ const mystyle = {
   borderRadius: '30px',
   textAlign: 'center'
 };
-export default Follow
+
+export default Follower
+

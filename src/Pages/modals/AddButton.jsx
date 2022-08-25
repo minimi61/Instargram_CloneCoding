@@ -1,13 +1,13 @@
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-import { getPost, __postPost } from '../../../Redux/modules/postSlice';
+import { getPost, __postPost } from '../../Redux/modules/postSlice';
 import React, { useEffect, useState, useRef} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components';
 import { UploadFile } from '@mui/icons-material';
-import basicImg from '../../../Image/기본배경사진.jpg'
-import { getUserData } from '../../../shared/cookie';
+// import basicImg from '../../Image/기본배경사진.jpg'
+import { getUserData } from '../../shared/cookie';
 
 const AddButton = () => {
   
