@@ -43,8 +43,8 @@ if (comments.length === 0) {
 
         {
             comments?.map((val)=>
-                <div key={val.id} style={{ display: 'flex', margin:'0 0 20px 0'}}>
-                    <IdPersonImg src={ data.profileImage !== null ? data.profileImage : 사용자기본로고 } ></IdPersonImg>
+                <div key={val.id} style={{ display: 'flex', margin: '0 0 20px 0' }}>
+                    <IdPersonImg src={ val.profileImage !== null ? val.profileImage : 사용자기본로고 } ></IdPersonImg>
                     <div style={{width:'90%'}}>
                         <span style={{ marginLeft: '5px', fontWeight: '700' }}>{val.nickname}</span>
                         <span style={{ marginLeft: '5px' }}>{val.content}</span>
