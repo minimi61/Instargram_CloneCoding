@@ -10,7 +10,7 @@ import addImage from '../../../Image/addImg.png'
 import 기본로고 from '../../../Image/사용자 기본로고.jpg'
 
 const EditProfile = ({ openEditProfile,setOpenEditProfile,UserInfo }) => {
-  console.log(UserInfo)
+  // console.log(UserInfo)
   const dispatch = useDispatch()
   const [fileUrl, setFileUrl] = useState(addImage)
   const [description, setDescription] = useState('')

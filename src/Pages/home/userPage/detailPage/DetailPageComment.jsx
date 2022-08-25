@@ -8,6 +8,9 @@ import styled from 'styled-components'
 import { __getComment, __deleteComment } from '../../../../Redux/modules/comment'
 import { __geteCommentLike , __postCommentLike } from "../../../../Redux/modules/commentLike"
 import 사용자기본로고 from '../../../../Image/사용자 기본로고.jpg'
+import heart from '../../../../Image/heart.png'
+import colorHeart from '../../../../Image/colorHeart.png'
+
 
 const DetailPageComment = ({reload, setReload, data}) => {
 // console.log(data)
@@ -15,7 +18,7 @@ const DetailPageComment = ({reload, setReload, data}) => {
 const dispatch = useDispatch()
 const {isLoading, error, comments} = useSelector((state)=>state.comments)
 
-console.log(isLoading , error, comments)
+// console.log(isLoading , error, comments)
 
 
 useEffect(()=>{
@@ -59,7 +62,7 @@ if (comments.length === 0) {
 
                     {   val.liked === false ? 
                         <>
-                        <img src='images/heart.png' style={{ width: '21px', height: '21px' ,marginRight:'13px'}} type="button"
+                        <img src={heart} style={{ width: '21px', height: '21px' ,marginRight:'13px'}} type="button"
                         onClick={()=>{
                             const payload = { postId: data.id, commentId: val.id }
                             dispatch(__postCommentLike(payload))
@@ -69,7 +72,7 @@ if (comments.length === 0) {
                             }} ></img>
                         </> : 
                         <>
-                        <img src='images/colorHeart.png' style={{ width: '16px', height: '16px' ,marginRight:'15px'}} type="button"
+                        <img src={colorHeart} style={{ width: '16px', height: '16px' ,marginRight:'15px'}} type="button"
                         onClick={()=>{
                             const payload = { postId: data.id, commentId: val.id }
                             dispatch(__postCommentLike(payload))
