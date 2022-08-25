@@ -4,7 +4,7 @@ import 기본로고 from '../../Image/사용자 기본로고.jpg'
 import { getCookieToken } from '../../shared/cookie'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import win from 'global'
+// import win from 'global'
 
 const GetWhoFollow = ({ followData, followed }) => {
   const navigate = useNavigate();
