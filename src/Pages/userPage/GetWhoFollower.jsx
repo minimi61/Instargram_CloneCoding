@@ -21,7 +21,7 @@ const GetWhoFollower = ({ followerData,followed }) => {
     <div>
     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem' }}>
            <div style={{ display: 'flex' }}>
-             <IdPersonImg src={followerData.profileImage == null ? 기본로고 : followerData.profileImage} />
+             <IdPersonImg src={followerData.profileImage == null ? 기본로고 : followerData.profileImage} onClick={() => { window.location.replace(`/user/${followerData.username}`) }} />
 
              <div style={{ marginLeft: '10px' }}>
                <div style={{ fontWeight: '900' }}>{followerData.username}</div>
@@ -37,6 +37,7 @@ const IdPersonImg = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  cursor: pointer;
 `
 const FollowButton = styled.button`
   width: 100px;

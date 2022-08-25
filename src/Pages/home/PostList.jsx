@@ -97,7 +97,7 @@ const PostList = ({ data }) => {
         <CardLike onClick={clickLikeCount}>좋아요 {data.likesCount}개</CardLike>
           <CardInnerContent >
             <p style={{  marginTop: '2px',fontWeight: '900', fontSize: '16px' }}>{data.nickname}</p>
-            <div style={{ marginTop: '2px', marginLeft: '10px', fontSize: '16px' }}>{data.description}</div >
+            <div style={{ marginTop: '2px', marginLeft: '10px', fontSize: '16px' }}>{data.description.slice(0,20)}</div >
             <div style={{ cursor: 'pointer' }} onClick={handleDetail}> ...더보기</div>
             
         </CardInnerContent>

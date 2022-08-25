@@ -3,8 +3,12 @@ import styled from 'styled-components'
 import 기본로고 from '../../Image/사용자 기본로고.jpg'
 import { getCookieToken } from '../../shared/cookie'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+import win from 'global'
 
 const GetWhoFollow = ({ followData, followed }) => {
+  const navigate = useNavigate();
+
   const [getFollowData, setGetFollowData] = React.useState(followed)
   const followProcess = async () => {
     const response = await axios.post(`https://jdh3340.shop/api/user/${followData.username}/follow`,followData.username,
@@ -18,7 +22,7 @@ const GetWhoFollow = ({ followData, followed }) => {
     <div>
     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem' }}>
            <div style={{ display: 'flex' }}>
-          <IdPersonImg src={followData.profileImage == null ? 기본로고 : followData.profileImage} />
+          <IdPersonImg src={followData.profileImage == null ? 기본로고 : followData.profileImage} onClick={() => { window.location.replace(`/user/${followData.username}`) }} />
 
              <div style={{ marginLeft: '10px' }}>
                <div style={{ fontWeight: '900' }}>{followData.username}</div>
@@ -34,6 +38,7 @@ const IdPersonImg = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  cursor: pointer;
 `
 const FollowButton = styled.button`
   background-color: white;
