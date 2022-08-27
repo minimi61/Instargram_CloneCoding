@@ -84,7 +84,7 @@ Instargram 클론 프로젝트 입니다.
  ![clone_2](https://user-images.githubusercontent.com/85866328/187017053-f31d5e8b-716f-4815-992d-476a1663b77b.gif)
  
  #### 3. 게시글 수정 & 팔로우, 팔로우취소 & 다른 유저 프로필과 게시글 확인
- ![clone_3](https://user-images.githubusercontent.com/85866328/187016113-0b415da7-bda6-4073-af08-349ed013fb6f.gif)
+![clone_3](https://user-images.githubusercontent.com/85866328/187020340-b70436bb-5d59-49df-b0ac-76ad4676a169.gif)
 
 ## REPOSITORIES
 - BACK-END
@@ -92,4 +92,4 @@ Instargram 클론 프로젝트 입니다.
 
 - FRONT-END
 [GitHub - chipmunkcol/cloneCoding: 항해99 7주차 팀과제](https://github.com/chipmunkcol/cloneCoding)<br><br>
->>>>>>> 4b1a84afd69db066cb7b2dded0316bde38624c1d
+
