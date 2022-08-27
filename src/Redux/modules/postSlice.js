@@ -43,10 +43,8 @@ export const __postPost = createAsyncThunk(
 export const __editPost = createAsyncThunk(
   "posts/editPost", async (payload, thunkAPI) => {
     try {
-      console.log(payload)
     const data = await axios.put(`https://jdh3340.shop/api/user/posts/${payload.id}`, { file: payload.file, description: payload.description, tag: payload.tag },
     { headers: {Authorization: myToken} });
-    console.log(data.data)
     return thunkAPI.fulfillWithValue(data.data)
     } catch (error) {
     console.log(error)

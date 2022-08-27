@@ -36,7 +36,6 @@ const UpdateDetailPage = ({data,clickUpdate, setClickUpdate, setOthersMenuOpen})
       description: comment,
       tag: "#"+tag
     }
-    console.log(post)
     dispatch(__editPost(post))
     alert('포스팅완료!')
     window.location.reload('/')

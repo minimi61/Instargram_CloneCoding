@@ -17,7 +17,7 @@ const GetWhoLike = ({ likeData,data,followedResult }) => {
       }}
     )
     setGetFollowData(response.data.data)
-    console.log('서버에 올라간 팔로우 결과',response.data.data)
+    // console.log('서버에 올라간 팔로우 결과',response.data.data)
   }
   return (
     <div>
