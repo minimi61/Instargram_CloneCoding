@@ -1,5 +1,5 @@
-## Instargram 클론코딩 
 ![logoo](https://user-images.githubusercontent.com/85866328/187014686-38b6d69d-fd8e-4168-8b57-6cba87992393.png)
+## Instargram 클론코딩 
 
 ## ****🤷‍♂️ 프로젝트 목적****
 이 프로젝트는 항해99의 클론 프로젝트 과제로<br>
@@ -70,4 +70,25 @@ Instargram 클론 프로젝트 입니다.
 </div>
   <br>  <br>
   
-![instar_login](https://user-images.githubusercontent.com/85866328/187014666-09afb4b2-1981-4c1b-a297-e26fdf9ac15e.png)
+## ****🛫 ERD****  
+![image](https://user-images.githubusercontent.com/85866328/187015996-f937066a-e889-4420-bef4-2a74bdea78dd.png)
+
+## ****💡 API설계****  
+![image](https://user-images.githubusercontent.com/85866328/187016021-e2f2da36-378b-4086-870a-8c56fdb7136d.png)
+
+ ## ****🖼️ 프로젝트 상세****
+ #### 1.로그인&회원가입
+![clone_1](https://user-images.githubusercontent.com/85866328/187015936-d796e06b-9914-4b45-b91a-326943c4900e.gif)
+
+ #### 2. 게시글 올리기&좋아요&게시글삭제&댓글달기&댓글좋아요,삭제
+ ![clone_2](https://user-images.githubusercontent.com/85866328/187016045-067d6f80-28d9-49b1-9714-9a9b6255450d.gif)
+ 
+ #### 3. 게시글 수정&팔로우&팔로우취소&다른 유저 프로필과 게시글 확인
+ ![clone_3](https://user-images.githubusercontent.com/85866328/187016113-0b415da7-bda6-4073-af08-349ed013fb6f.gif)
+
+## REPOSITORIES
+- BACK-END
+[GitHub - JangDongHa/instargram-clone-project: 항해99 7주차 팀과제](https://github.com/JangDongHa/instargram-clone-project)
+
+- FRONT-END
+[GitHub - chipmunkcol/cloneCoding: 항해99 7주차 팀과제](https://github.com/chipmunkcol/cloneCoding)<br><br>
