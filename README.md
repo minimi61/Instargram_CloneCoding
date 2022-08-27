@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 ### Instargram 클론 코딩
-=======
+
 ![image](https://user-images.githubusercontent.com/85866328/187016336-ce8599eb-1573-45e9-b5f9-e5d131047388.png)
 
 ## ****🤷‍♂️ 프로젝트 목적****
