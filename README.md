@@ -1,4 +1,4 @@
-## Instargram 클론코딩 ![logoo](https://user-images.githubusercontent.com/85866328/187014686-38b6d69d-fd8e-4168-8b57-6cba87992393.png)
+## ![logoo](https://user-images.githubusercontent.com/85866328/187014686-38b6d69d-fd8e-4168-8b57-6cba87992393.png)클론코딩
 
 ## ****🤷‍♂️ 프로젝트 목적****
 이 프로젝트는 항해99의 클론 프로젝트 과제로<br>
