@@ -10,6 +10,7 @@ import { userPageSlice } from '../modules/userPage';
 import { userInfoSlice } from '../modules/userPage';
 import { commentLikeSlice } from '../modules/commentLike';
 import { editProfileSlice } from '../modules/editProfile';
+// import  addBtnChange  from '../modules/AddBtnModal';
 
  const store = configureStore(
   {
@@ -26,7 +27,6 @@ import { editProfileSlice } from '../modules/editProfile';
       userPage: userPageSlice.reducer,
       userInfo: userInfoSlice.reducer,
       editProfile: editProfileSlice.reducer,
-      
     },
     
   },

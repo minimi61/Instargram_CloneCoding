@@ -10,6 +10,7 @@ import DetailPage from './Pages/detailPage/DetailPage';
 import Header from './Pages/Header';
 import { getCookieToken } from './shared/cookie';
 
+
 function App() {
   const [openImg, setOpenImg] = React.useState(false);
   const [dropmenu, setDropmenu] = React.useState(false);
@@ -28,21 +29,21 @@ function App() {
   }
 
   return (
-    <div className="App">
-
-      <Header setOpenImg={setOpenImg} setDropmenu={setDropmenu} dropmenu={dropmenu} />
+    <>
+      <div className="App">
+        <Header setOpenImg={setOpenImg} setDropmenu={setDropmenu} dropmenu={dropmenu} />
       
-      <Routes>
-        <Route path='/' element={<Home openImg={openImg} setOpenImg={setOpenImg} setDropmenu={setDropmenu}/>}></Route>
-        <Route path='/user/detail' element={<DetailPage/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
-        <Route path='/register' element={<Register/>}></Route>
-        <Route path='/user/:username' element={<UserPage/>}></Route>
-        {/* <Route path='/upLoad' element={<UpLoad/>}></Route> */}
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home openImg={openImg} setOpenImg={setOpenImg} setDropmenu={setDropmenu}/>}></Route>
+          <Route path='/user/detail' element={<DetailPage/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/register' element={<Register/>}></Route>
+          <Route path='/user/:username' element={<UserPage/>}></Route>
+          {/* <Route path='/upLoad' element={<UpLoad/>}></Route> */}
+        </Routes>
       
-
-    </div>
+      </div>
+    </>
   );
 }
 

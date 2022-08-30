@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components'
 import '../App.css';
@@ -9,11 +9,18 @@ import send from '../Image/send.png'
 import add from '../Image/add.png'
 import who from '../Image/who.png'
 import heart from '../Image/heart.png'
+// import addBtnChange from '../Redux/modules/AddBtnModal';
+import { useDispatch, useSelector } from 'react-redux';
+// import { ModalsStateContext, ModalDispatchContext } from '../Redux/modules/AddBtnModal';
+const Header = ({ openImg, setOpenImg, dropmenu, setDropmenu }) => {
 
-const Header = ({ setOpenImg, dropmenu, setDropmenu }) => {
+
+  const aa = useSelector(state=>console.log(state.addBtnChange))
+  const dispatch = useDispatch
   const navigate = useNavigate();
   const openAddImage = () => {
-    setOpenImg((prev) => (!prev))
+    // setOpenImg((prev) => (!prev))
+    dispatch({type:'ADD_BTN'})
   }
   const dropToggle = () => {
     return setDropmenu(!dropmenu);
