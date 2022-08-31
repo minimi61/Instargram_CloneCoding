@@ -9,10 +9,9 @@ import UserPage from './Pages/userPage/UserPage'
 import DetailPage from './Pages/detailPage/DetailPage';
 import Header from './Pages/Header';
 import { getCookieToken } from './shared/cookie';
-
+import { ModalAddOpen } from './Redux/modules/AddBtnModal'
 
 function App() {
-  const [openImg, setOpenImg] = React.useState(false);
   const [dropmenu, setDropmenu] = React.useState(false);
 
   const isToken = getCookieToken();
@@ -29,12 +28,12 @@ function App() {
   }
 
   return (
-    <>
+    <ModalAddOpen>
       <div className="App">
-        <Header setOpenImg={setOpenImg} setDropmenu={setDropmenu} dropmenu={dropmenu} />
+        <Header setDropmenu={setDropmenu} dropmenu={dropmenu} />
       
         <Routes>
-          <Route path='/' element={<Home openImg={openImg} setOpenImg={setOpenImg} setDropmenu={setDropmenu}/>}></Route>
+          <Route path='/' element={<Home setDropmenu={setDropmenu}/>}></Route>
           <Route path='/user/detail' element={<DetailPage/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
@@ -43,7 +42,7 @@ function App() {
         </Routes>
       
       </div>
-    </>
+    </ModalAddOpen>
   );
 }
 

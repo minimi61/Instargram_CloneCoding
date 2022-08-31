@@ -9,19 +9,14 @@ import send from '../Image/send.png'
 import add from '../Image/add.png'
 import who from '../Image/who.png'
 import heart from '../Image/heart.png'
-// import addBtnChange from '../Redux/modules/AddBtnModal';
 import { useDispatch, useSelector } from 'react-redux';
-// import { ModalsStateContext, ModalDispatchContext } from '../Redux/modules/AddBtnModal';
-const Header = ({ openImg, setOpenImg, dropmenu, setDropmenu }) => {
+import { useMyContext } from '../Redux/modules/AddBtnModal';
 
+const Header = ({ dropmenu, setDropmenu }) => {
+  const myContext = useMyContext();
 
-  const aa = useSelector(state=>console.log(state.addBtnChange))
-  const dispatch = useDispatch
   const navigate = useNavigate();
-  const openAddImage = () => {
-    // setOpenImg((prev) => (!prev))
-    dispatch({type:'ADD_BTN'})
-  }
+
   const dropToggle = () => {
     return setDropmenu(!dropmenu);
   };
@@ -58,7 +53,7 @@ const Header = ({ openImg, setOpenImg, dropmenu, setDropmenu }) => {
           <div>
             <img style={{ width: '30px', height: '30px', marginTop: '5px', marginRight: '20px', cursor: 'pointer' }} onClick={()=>{navigate('/')}} alt="home" src={home}></img>
             <img style={{ width: '30px', height: '30px', marginTop: '5px', marginRight: '15px', cursor: 'pointer' }} onClick={notFunction} alt="send" src={send}></img>
-            <img style={{ width: '35px', height: '35px', marginTop: '5px', marginRight: '10px', cursor: 'pointer' }} onClick={()=>{ goLogin(); if (usertoken) {openAddImage()}}} alt="add" src={add}></img>
+            <img style={{ width: '35px', height: '35px', marginTop: '5px', marginRight: '10px', cursor: 'pointer' }} onClick={myContext.btnClickOn} alt="add" src={add}></img>
             <img style={{ width: '50px', height: '50px', marginTop: '5px', marginRight: '10px', cursor: 'pointer' }} alt="heart" src={heart} onClick={notFunction}></img>
             <img style={{ width: '40px', height: '40px', marginTop: '5px', cursor: 'pointer' }} onClick={()=>{ goLogin(); if (usertoken) {dropToggle()}}} alt="who" src={who} ></img>
             {

@@ -2,19 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import Main from './Main'
 import AddButton from '../modals/AddButton'
+import { useMyContext } from '../../Redux/modules/AddBtnModal'
 
-const Home = ({ openImg, setOpenImg, setDropmenu }) => {
+const Home = ({  setDropmenu }) => {
+  const myContext = useMyContext();
+  console.log(myContext)
   const ClickOuter = () => {
-    setOpenImg(false)
+    // setOpenImg(false)
+    myContext.btnClickOff();
     setDropmenu(false)
   }
   return (
     <div>
-      <HomeContainer openImg={openImg}>
+      <HomeContainer>
         {/* 메뉴-새로운 사진 추가하기버튼입니다 */}
-        {openImg ? <AddButton /> : null}
+        {myContext.btnOpen ? <AddButton /> : null}
         <HomeInner onClick={ClickOuter}>
-          <Main openImg={openImg} setOpenImg={setOpenImg} />
+          <Main  />
         </HomeInner>
       </HomeContainer>
 
